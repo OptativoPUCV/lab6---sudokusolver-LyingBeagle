@@ -46,3 +46,15 @@ Sun 08 Oct 2023 02:08:24 AM UTC:
  tests:  5|3
 total_score: 35/70
 2e541e6
+Sun 08 Oct 2023 02:11:01 AM UTC: 
+ sudoku.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:121:22: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+  121 |               return lista;
+      |                      ^~~~~
+      |                      list
+sudoku.c:121:22: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+0276e6a
