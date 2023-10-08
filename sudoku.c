@@ -45,9 +45,6 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
 
-    
-    
-  
     //Filas
     for(int fila = 0; fila < 9; fila++){
 
@@ -111,13 +108,14 @@ List* get_adj_nodes(Node* n){
 
             if(n->sudo[i][j] == 0){
 
-                for(int k = 1; k < 10; k++){
+                if(is_valid(n)){
+                  for(int k = 1; k < 10; k++){
                     Node* aux = copy(n);
 
                     aux->sudo[i][j] = k;
   
                     push(list,aux);
-                
+                  }
                 }               
             }
           
