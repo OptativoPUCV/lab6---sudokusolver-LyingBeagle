@@ -118,7 +118,7 @@ List* get_adj_nodes(Node* n){
                     }
   
                 }
-              return lista;
+              return list;
             }
           
         }
