@@ -108,14 +108,15 @@ List* get_adj_nodes(Node* n){
 
             if(n->sudo[i][j] == 0){
 
-                if(is_valid(n)){
-                  for(int k = 1; k < 10; k++){
+                for(int k = 1; k < 10; k++){
                     Node* aux = copy(n);
 
                     aux->sudo[i][j] = k;
+
+                    if(is_valid(aux)){
+                        push(list,aux);
+                    }
   
-                    push(list,aux);
-                  }
                 }               
             }
           
